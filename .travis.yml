@@ -20,7 +20,6 @@ env:
   - TERM=dumb
   matrix:
   - ANDROID_SDKS=android-25 ANDROID_TARGET=android-25
-  - secure: mxomJaiVDcvme3EppmkeAg2Py9aBPePBFcLl2y2tEstcOzZWP+ZpA8SEnuJ9UIIfDfKsWbv89/X4BpM5HmVJ/P8qaGdNzICc+za/2U8834bIzIdjpMU80mRKrhwFhEl81jUlzZblrMION/w9FB+5uDrXtiWdyLX6D09hwmkM7Ag=
 before_install:
 - chmod +x gradlew
 before_cache:
