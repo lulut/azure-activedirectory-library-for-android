@@ -31,7 +31,7 @@ public class AcquireToken implements Task{
                 WaitUntil.the(Main.ACQUIRE_TOKEN_BUTTON, isVisible()),
                 Click.on(Main.ACQUIRE_TOKEN_BUTTON),
                 Enter.theValue(user.getTokenRequestAsJson()).into(Request.REQUEST_INFO_FIELD),
-                closeKeyboard,
+                //closeKeyboard,
                 WaitUntil.the(Request.SUBMIT_REQUEST_BUTTON, isVisible()),
                 Click.on(Request.SUBMIT_REQUEST_BUTTON),
                 WaitUntil.the(SignInPageUserName.USERNAME, isVisible()),
