@@ -46,7 +46,6 @@ public class AcquireTokenBasicTest {
                 //{"Shibboleth"}
 
         });
-
     }
 
     static AppiumDriverLocalService appiumService = null;

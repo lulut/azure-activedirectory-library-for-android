@@ -15,6 +15,7 @@ public class User extends Actor {
     private String federationProvider;
     private Credential credential;
 
+
     public void setTokenRequest(TokenRequest tokenRequest){
         this.tokenRequest = tokenRequest;
     }
