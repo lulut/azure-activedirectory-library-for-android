@@ -23,7 +23,6 @@ public class AcquireTokenSilent implements Task{
         actor.attemptsTo(
                 Click.on(Main.ACQUIRE_TOKEN_SILENT),
                 Enter.theValue(user.getSilentTokenRequestAsJson()).into(Request.REQUEST_INFO_FIELD),
-                closeKeyboard,
                 Click.on(Request.SUBMIT_REQUEST_BUTTON)
         );
     }

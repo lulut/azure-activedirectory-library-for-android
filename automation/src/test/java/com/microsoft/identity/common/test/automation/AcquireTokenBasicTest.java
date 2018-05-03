@@ -40,11 +40,10 @@ public class AcquireTokenBasicTest {
 
         return Arrays.asList(new Object[][]{
                 {"ADFSv2"},
-                //{"ADFSv3"},
-                {"ADFSv4"}//,
-                //{"PingFederate"}//,
-                //{"Shibboleth"}
-
+                {"ADFSv3"},
+                {"ADFSv4"},
+                {"PingFederate"},
+                {"Shibboleth"}
         });
     }
 

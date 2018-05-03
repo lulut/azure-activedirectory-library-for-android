@@ -14,7 +14,7 @@ public class ClickDone implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(Results.DONE_BUTTON, isVisible()),
+                WaitUntil.the(Results.DONE_BUTTON, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(Results.DONE_BUTTON)
         );
     }

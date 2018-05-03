@@ -18,8 +18,10 @@ public class SignInUserShibboleth extends SignInUser {
     @Override
     public <T extends Actor> void performAs(T actor) {
         User user = (User)actor;
+        String[] username = user.getCredential().userName.split("@");
+
         user.attemptsTo(
-                Enter.theValue(user.getCredential().userName).into(SignInPage.USERNAME_FIELD),
+                Enter.theValue(username[0]).into(SignInPage.USERNAME_FIELD),
                 //Not using static method here to avoid logging the password via instrumentation... this won't show up as a step
                 new EnterValueIntoTarget(user.getCredential().password, SignInPage.PASSWORD_FIELD),
                 new CloseKeyboard(),
