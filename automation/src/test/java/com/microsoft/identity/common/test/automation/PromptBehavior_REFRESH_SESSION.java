@@ -33,7 +33,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.GivenWhenThen.then;
 import static org.hamcrest.Matchers.is;
-
+// test case 322041
 @RunWith(SerenityParameterizedRunner.class)
 public class PromptBehavior_REFRESH_SESSION {
     @TestData
@@ -42,7 +42,7 @@ public class PromptBehavior_REFRESH_SESSION {
 
         return Arrays.asList(new Object[][]{
                 {"ADFSv2"},
-                {"ADFSv3"},
+                //{"ADFSv3"},
                 {"ADFSv4"}
         });
 
