@@ -12,6 +12,7 @@ public class User extends Actor {
 
     private TokenRequest tokenRequest;
     private TokenRequest silentTokenRequest;
+    private TokenRequest promptbehaviorRefreshSession;
     private String federationProvider;
     private Credential credential;
 
@@ -32,6 +33,11 @@ public class User extends Actor {
         return this.silentTokenRequest;
     }
 
+    public String getSilentTokenRequestAsJson() {
+        Gson gson = new Gson();
+        String requestJson = gson.toJson(this.silentTokenRequest);
+        return requestJson;
+    }
 
     public String getTokenRequestAsJson() {
         Gson gson = new Gson();
@@ -39,11 +45,21 @@ public class User extends Actor {
         return requestJson;
     }
 
-    public String getSilentTokenRequestAsJson() {
+    public void setPromptbehaviorRefreshSessionRequest(TokenRequest tokenRequest){
+        this.promptbehaviorRefreshSession = tokenRequest;
+    }
+
+    public TokenRequest getPromptbehaviorRefreshSessionRequest(){
+        return this.promptbehaviorRefreshSession;
+    }
+
+    public String getpromptbehaviorRefreshSession_as_json() {
         Gson gson = new Gson();
-        String requestJson = gson.toJson(this.silentTokenRequest);
+        String requestJson = gson.toJson(this.promptbehaviorRefreshSession);
         return requestJson;
     }
+
+
 
     public void setCredential(Credential credential){
         this.credential = credential;

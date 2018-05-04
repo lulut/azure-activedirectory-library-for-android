@@ -96,6 +96,7 @@ public class AcquireTokenBasicTest {
         User newUser = User.named("james");
         newUser.setFederationProvider(scenario.getTestConfiguration().getUsers().getFederationProvider());
         newUser.setTokenRequest(scenario.getTokenRequest());
+        newUser.setPromptbehaviorRefreshSessionRequest(scenario.getPrompt_Behavior_Refresh());
         newUser.setCredential(scenario.getCredential());
 
         return newUser;

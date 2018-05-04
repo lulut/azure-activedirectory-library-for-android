@@ -11,6 +11,7 @@ public class Scenario {
     private Credential mCredential;
     private TokenRequest mTokenRequest;
     private TokenRequest mSilentTokenRequest;
+    private TokenRequest mPromptBehavior_refresh;
 
     public TestConfiguration getTestConfiguration() {
         return mTestConfiguration;
@@ -20,6 +21,7 @@ public class Scenario {
         this.mTestConfiguration = testConfiguration;
         this.createTokenRequest();
         this.createSilentTokenRequest();
+        this.create_Prompt_Behavior_Refresh();
     }
 
     public Credential getCredential() {
@@ -61,6 +63,18 @@ public class Scenario {
         tr.setClientId(this.getTestConfiguration().getAppId());
         tr.setUniqueUserId(this.getTestConfiguration().getUsers().getObjectId());
         this.mSilentTokenRequest = tr;
+    }
+    public TokenRequest getPrompt_Behavior_Refresh() {
+        return mPromptBehavior_refresh;
+    }
+    private void create_Prompt_Behavior_Refresh(){
+        TokenRequest tr = new TokenRequest();
+        tr.setAuthority(getAuthority(this.getTestConfiguration().getAuthority().get(0)));
+        tr.setRedirectUri(this.getTestConfiguration().getRedirectUri().get(0));
+        tr.setResourceId(this.getTestConfiguration().getResourceIds().get(0));
+        tr.setClientId(this.getTestConfiguration().getAppId());
+        tr.setPromptBehavior("refresh_session");
+        this.mPromptBehavior_refresh = tr;
     }
 
     private String getAuthority(String authorityHost){
