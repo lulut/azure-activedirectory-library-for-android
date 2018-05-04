@@ -31,10 +31,8 @@ public class AcquireTokenPBRefresh implements Task {
                 Enter.theValue(user.getpromptbehaviorRefreshSession_as_json()).into(Request.REQUEST_INFO_FIELD),
                 WaitUntil.the(Request.SUBMIT_REQUEST_BUTTON, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(Request.SUBMIT_REQUEST_BUTTON),
-                WaitUntil.the(SignInPageUserName.USERNAME, isVisible()).forNoMoreThan(10).seconds(),
-                new EnterUserNameForSignInDisambiguation(),
-                WaitUntil.the(SignInPagePassword.PASSWORD, isVisible()).forNoMoreThan(10).seconds(),
-                signInUser
+                WaitUntil.the(SignInPageUserName.USER_PICK, isVisible()).forNoMoreThan(20).seconds(),
+                Click.on(SignInPageUserName.USER_PICK)
         );
     }
 }

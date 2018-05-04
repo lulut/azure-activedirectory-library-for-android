@@ -10,5 +10,5 @@ public class SignInPageUserName {
 
     public static Target USERNAME = Target.the("Username field").located(MobileBy.AndroidUIAutomator("new UiSelector().className(\"android.widget.EditText\").instance(0)"));
     public static Target NEXT_BUTTON = Target.the("Next button").located(MobileBy.AndroidUIAutomator("new UiSelector().className(\"android.widget.Button\").instance(0)"));
-
+    public static Target USER_PICK = Target.the("User pick").located(MobileBy.AndroidUIAutomator("new UiSelector().className(\"android.widget.Button\").instance(0)"));
 }

@@ -42,11 +42,8 @@ public class PromptBehavior_REFRESH_SESSION {
 
         return Arrays.asList(new Object[][]{
                 {"ADFSv2"},
-                //{"ADFSv3"},
-                //{"ADFSv4"}//,
-                //{"PingFederate"},
-                //{"Shibboleth"}
-
+                {"ADFSv3"},
+                {"ADFSv4"}
         });
 
     }
@@ -114,6 +111,10 @@ public class PromptBehavior_REFRESH_SESSION {
     public void should_be_able_to_acquire_token_and_then_acquire_promptbehavior() {
 
         james.attemptsTo(
+                acquireToken,
+                clickDone,
+                readCache,
+                clickDone,
                 acquireTokenPBRefresh,
                 clickDone,
                 readCache

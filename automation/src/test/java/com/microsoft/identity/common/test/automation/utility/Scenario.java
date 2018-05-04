@@ -1,5 +1,6 @@
 package com.microsoft.identity.common.test.automation.utility;
 
+import com.gargoylesoftware.htmlunit.PromptHandler;
 import com.google.gson.Gson;
 import com.microsoft.identity.internal.test.labapi.model.TestConfiguration;
 
