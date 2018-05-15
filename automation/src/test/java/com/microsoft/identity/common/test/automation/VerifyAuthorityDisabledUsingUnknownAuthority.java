@@ -96,8 +96,10 @@ public class VerifyAuthorityDisabledUsingUnknownAuthority {
         newUser.setFederationProvider(scenario.getTestConfiguration().getUsers().getFederationProvider());
         newUser.setTokenRequest(scenario.getTokenRequest());
         newUser.setCredential(scenario.getCredential());
-        newUser.setValidateAuthority(true);
-        newUser.setAuthority("https://myfakeauthority.onmicrosoft.com");
+        newUser.setAuthority("https://login.microsoftonline.com/common");
+        //newUser.setValidateAuthority(true);
+        //newUser.setAuthority("https://myfakeauthority.onmicrosoft.com");
+
         return newUser;
     }
 
